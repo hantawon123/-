@@ -3,14 +3,14 @@ unsigned int count, toggle,cnt;
 
 void setup() {
   pinMode(PIN7, OUTPUT);
-  Serial.begin(115200); // Initialize serial port
+  Serial.begin(115200);
   while (!Serial) {
     ; // wait for serial port to connect.
   }
   Serial.println("Hello World!");
   count = toggle = 1;
   cnt = 0;
-  digitalWrite(PIN7, toggle); // turn off LED.
+  digitalWrite(PIN7, toggle); 
 }
 
 void loop() {
@@ -24,7 +24,7 @@ void loop() {
       digitalWrite(PIN7, 1);
     }
   }
-  digitalWrite(PIN7, toggle); // update LED status.
+  digitalWrite(PIN7, toggle);
   if(cnt ==0)
   {
     cnt+=1;
